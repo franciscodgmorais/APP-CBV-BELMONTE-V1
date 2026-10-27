@@ -1,0 +1,14 @@
+{
+  "name": "CBV BELMONTE — Aplicação de apoio à decisão",
+  "short_name": "CBV Belmonte",
+  "description": "Ferramenta de apoio operacional dos Bombeiros do Concelho de Belmonte.",
+  "lang": "pt-PT",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f4f6",
+  "theme_color": "#b5121b",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
