@@ -1,30 +1,19 @@
-# CBV BELMONTE — Aplicação de apoio à decisão
+# CBV BELMONTE — Cartografia V2 corrigida
 
-Primeira versão funcional (PWA) preparada para iPhone e outros dispositivos.
+## O que foi corrigido
+- A camada **Limites de freguesia** consulta agora o serviço geográfico da Direção-Geral do Território (DGT), filtrando as freguesias do concelho de Belmonte.
+- A carga dos limites é independente da consulta à OpenStreetMap/Overpass, para uma falha numa fonte não bloquear as outras camadas.
+- Mensagens de estado no ecrã para explicar se os dados estão a carregar ou se uma fonte externa não respondeu.
+- Mantidos os 7 hidrantes já existentes.
 
-## Funcionalidades incluídas
-- Página inicial em vermelho, branco e cinzento-escuro.
-- Módulo Hidrantes com Rede de Regadio (7 pontos) e secção preparada para Hidrantes Urbanos.
-- Pesquisa e lista de hidrantes.
-- Ficha individual com coordenadas e ligação para navegação.
-- Mapa Leaflet/OpenStreetMap com marcadores dos sete pontos.
-- Secções preparadas para Viaturas, Cartografia e Equipamentos.
-- Manifesto e service worker para instalação como aplicação web.
+## Instalação
+1. Extrair o ZIP.
+2. No repositório GitHub Pages, substituir o `index.html` pelo desta pasta, mantendo os restantes ficheiros existentes (manifesto, ícone, service worker, etc.).
+3. Fazer commit e aguardar a publicação.
+4. No iPhone, abrir a página e atualizar. Se aparecer a versão antiga, fechar e voltar a abrir ou limpar os dados da página/cache.
 
-## Coordenadas incluídas
-1. EM 571 — 40.369111, -7.332749
-2. Quinta da Ribeira — 40.341720, -7.323897
-3. EM 563 — 40.337889, -7.291794
-4. EM 1051 — Quinta das Pereiras — 40.330615, -7.377719
-5. EM 1051 — Malpique — 40.313732, -7.362837
-6. EN 18-3 — 40.310179, -7.316784
-7. EM 570 — 40.279867, -7.339817
-
-## Publicação
-Publicar o conteúdo desta pasta na raiz de um repositório GitHub novo e ativar GitHub Pages nas definições do repositório. Depois abrir o URL HTTPS no iPhone e usar Partilhar → Adicionar ao ecrã principal.
-
-## Limitações desta versão
-- O mapa base usa OpenStreetMap e necessita de Internet; os dados dos hidrantes estão incluídos no código.
-- O emblema atual é um ícone provisório, não o emblema oficial dos Bombeiros.
-- Os módulos Viaturas, Cartografia e Equipamentos são espaços preparados, sem dados reais ainda.
-- Antes de uso operacional, confirmar todas as coordenadas, nomes e acessos no terreno.
+## Fontes e limitações
+- Limites administrativos: serviço público da DGT (CAOP). A geometria é obtida em tempo real, portanto requer Internet e disponibilidade do serviço.
+- Base cartográfica: OpenStreetMap.
+- A23, ferrovia, estações e passagens: dados OpenStreetMap/Overpass, sujeitos a cobertura e validação local.
+- Não utilizar como cartografia operacional certificada sem validação pelas entidades competentes e no terreno.
