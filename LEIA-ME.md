@@ -1,23 +1,18 @@
-# CBV BELMONTE — atualização de outubro de 2026
+# CBV BELMONTE — correção da Cartografia
 
-## Conteúdo
-- `index.html` — aplicação atualizada com navegação Voltar/Início, partilha de localização, contactos úteis, EPH, cartografia e símbolos coloridos.
-- `logo-cbv-belmonte.png` — emblema usado sem quadrado de fundo na interface.
-- `frota-cbv-belmonte.jpg` — imagem de fundo já usada pela aplicação.
-- `rede-estradas-belmonte.jpg` — fotografia enviada da rede de estradas do concelho, disponível como camada de referência visual.
+## O que foi corrigido
+- As camadas da Linha Ferroviária, A23, estações/passagens e nós de acesso consultam agora mais do que um servidor público OpenStreetMap/Overpass, caso a primeira fonte falhe.
+- As linhas e pontos recebidos são adicionados às respetivas camadas, com identificação e ligação para navegação no Google Maps.
+- A imagem enviada da rede de estradas já não é colocada por cima do mapa. O conteúdo foi traçado como linhas vetoriais coloridas e clicáveis, com os nomes visíveis ao tocar/selecionar.
 
-## Atualizar o GitHub Pages
-1. Extrai o ZIP.
-2. No repositório `APP-CBV-BELMONTE-V1`, substitui `index.html`.
-3. Adiciona também `rede-estradas-belmonte.jpg` à raiz do repositório.
-4. Mantém os ficheiros existentes `sw.js`, `manifesto.webmanifesto` e restantes ficheiros do repositório; não os apagues.
-5. Faz Commit changes e abre a aplicação novamente. Se aparecer a versão antiga, fecha a aplicação e volta a abrir ou faz uma atualização forçada.
+## Importante
+- O traçado extraído da fotografia é aproximado, porque a imagem não contém georreferenciação/controlo cartográfico suficiente para garantir a posição exata de cada troço. Usar como referência visual e confirmar os alinhamentos no terreno.
+- A quilometragem oficial da A23 e dos nós não é inventada; só deve ser mostrada quando for confirmada por fonte rodoviária oficial.
+- A obtenção de dados ferroviários, nós de acesso e outros elementos externos depende de Internet e da disponibilidade dos servidores públicos. Se os servidores estiverem indisponíveis, voltar a abrir Cartografia mais tarde.
+- O conteúdo continua a não substituir cartografia operacional certificada.
 
-## Notas importantes
-- A camada dos Hidrantes Urbanos está criada, mas sem marcadores até existirem coordenadas georreferenciadas.
-- A fotografia da rede de estradas é apresentada como sobreposição de referência aproximada; não está georreferenciada com precisão e não deve ser usada para navegação ou decisões operacionais como se fosse cartografia oficial.
-- As camadas externas, distâncias rodoviárias, GPS, partilha e Google Maps dependem de ligação à Internet, permissões do dispositivo e disponibilidade dos serviços.
-- Os nós de acesso e os quilómetros oficiais só aparecem quando os dados públicos disponíveis os fornecem; a quilometragem não é inventada.
-- O contacto do CDOS de Castelo Branco incluído é 272 329 935, conforme acordado, e deve ser confirmado junto da entidade antes de uso operacional.
-- Adulto e Pediátrico estão criados como áreas preparadas; ainda não contêm protocolos clínicos completos.
-- A atualização foi verificada quanto à sintaxe JavaScript e ao conteúdo do pacote, mas não foi testada num iPhone nem validada em serviço operacional real.
+## Atualizar GitHub Pages
+1. Extrair o ZIP.
+2. Substituir `index.html` no repositório `APP-CBV-BELMONTE-V1`.
+3. Manter os restantes ficheiros e imagens já existentes no repositório. O ficheiro `rede-estradas-belmonte.jpg` deixa de ser necessário para sobreposição, mas pode ser mantido como referência.
+4. Fazer Commit changes e atualizar a aplicação.
