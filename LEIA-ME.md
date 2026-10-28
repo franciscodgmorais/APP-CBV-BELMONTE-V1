@@ -24,3 +24,10 @@ Atualização cartográfica: foram adicionados localmente os PK de referência d
 O mapa base e os hidrantes são apresentados primeiro. As camadas externas deixam de fazer três tentativas de espera prolongada: a consulta Overpass tem limite de cerca de 9 segundos e os limites administrativos têm limite de 7 segundos. Se o serviço externo estiver lento, a aplicação mantém o mapa base e os recursos locais disponíveis, em vez de esperar dezenas de segundos. A disponibilidade das camadas externas depende da rede e dos serviços públicos.
 
 CDOS Castelo Branco: 272 337 733.
+
+
+## Otimização de carregamento móvel (28-10-2026)
+- O mapa abre primeiro com a camada base, os 7 hidrantes e a posição GPS; o pedido de GPS usa primeiro uma localização recente/rápida.
+- A consulta pesada da A23/ferrovia deixou de iniciar automaticamente: ativa as respetivas camadas quando forem necessárias.
+- Os limites de freguesia ficam em cache local após a primeira obtenção, para acelerar aberturas seguintes no mesmo navegador/dispositivo.
+- Cada nó A23 tem um botão de direções Google Maps por pesquisa do nome; PK, entrada/saída e sentido continuam assinalados como por confirmar até existir fonte oficial.
