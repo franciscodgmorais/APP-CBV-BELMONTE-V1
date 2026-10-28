@@ -1,19 +1,14 @@
-# CBV BELMONTE — Cartografia V2 corrigida
+CBV BELMONTE — Atualização de identidade visual e posição atual
 
-## O que foi corrigido
-- A camada **Limites de freguesia** consulta agora o serviço geográfico da Direção-Geral do Território (DGT), filtrando as freguesias do concelho de Belmonte.
-- A carga dos limites é independente da consulta à OpenStreetMap/Overpass, para uma falha numa fonte não bloquear as outras camadas.
-- Mensagens de estado no ecrã para explicar se os dados estão a carregar ou se uma fonte externa não respondeu.
-- Mantidos os 7 hidrantes já existentes.
+Inclui:
+- Emblema fornecido integrado no cabeçalho.
+- Fotografia da frota como fundo do cabeçalho com sobreposição vermelha.
+- Ao abrir “Minha posição”, tenta obter a localização GPS automaticamente (sujeito a autorização).
+- Mostra latitude/longitude, precisão GPS e coordenadas UTM WGS84.
+- Tenta identificar a via e a localidade por geocodificação inversa OpenStreetMap/Nominatim quando existe Internet.
+- Bússola visível; a ativação dos sensores continua a exigir ação do utilizador em dispositivos como iPhone.
 
-## Instalação
-1. Extrair o ZIP.
-2. No repositório GitHub Pages, substituir o `index.html` pelo desta pasta, mantendo os restantes ficheiros existentes (manifesto, ícone, service worker, etc.).
-3. Fazer commit e aguardar a publicação.
-4. No iPhone, abrir a página e atualizar. Se aparecer a versão antiga, fechar e voltar a abrir ou limpar os dados da página/cache.
-
-## Fontes e limitações
-- Limites administrativos: serviço público da DGT (CAOP). A geometria é obtida em tempo real, portanto requer Internet e disponibilidade do serviço.
-- Base cartográfica: OpenStreetMap.
-- A23, ferrovia, estações e passagens: dados OpenStreetMap/Overpass, sujeitos a cobertura e validação local.
-- Não utilizar como cartografia operacional certificada sem validação pelas entidades competentes e no terreno.
+Limitações importantes:
+- O quilómetro rodoviário e o sentido da via ainda não são apresentados como dados confirmados; necessitam de dados lineares/rodoviários próprios e validação.
+- A cartografia depende de serviços externos e Internet. Confirmar todos os dados antes de utilização operacional.
+- Para publicar, carregar todos os ficheiros deste pacote para a raiz do repositório GitHub Pages, substituindo os ficheiros correspondentes após guardar uma cópia de segurança.
