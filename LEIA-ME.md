@@ -16,3 +16,6 @@
 2. Substituir `index.html` no repositório `APP-CBV-BELMONTE-V1`.
 3. Manter os restantes ficheiros e imagens já existentes no repositório. O ficheiro `rede-estradas-belmonte.jpg` deixa de ser necessário para sobreposição, mas pode ser mantido como referência.
 4. Fazer Commit changes e atualizar a aplicação.
+
+
+Atualização cartográfica: foram adicionados localmente os PK de referência da imagem fornecida para os nós (34) Benespera (199,2/199,7), (33) Maçainhas (190,1/190,6), (32) Caria (181,7/182,1) e (31) Covilhã Norte (172,6/172,9). Entrada/saída e sentido de circulação permanecem por confirmar documentalmente; não foram inferidos.
