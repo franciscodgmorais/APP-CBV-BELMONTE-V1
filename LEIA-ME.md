@@ -19,3 +19,8 @@
 
 
 Atualização cartográfica: foram adicionados localmente os PK de referência da imagem fornecida para os nós (34) Benespera (199,2/199,7), (33) Maçainhas (190,1/190,6), (32) Caria (181,7/182,1) e (31) Covilhã Norte (172,6/172,9). Entrada/saída e sentido de circulação permanecem por confirmar documentalmente; não foram inferidos.
+
+## Correção de carregamento móvel (28-10-2026)
+O mapa base e os hidrantes são apresentados primeiro. As camadas externas deixam de fazer três tentativas de espera prolongada: a consulta Overpass tem limite de cerca de 9 segundos e os limites administrativos têm limite de 7 segundos. Se o serviço externo estiver lento, a aplicação mantém o mapa base e os recursos locais disponíveis, em vez de esperar dezenas de segundos. A disponibilidade das camadas externas depende da rede e dos serviços públicos.
+
+CDOS Castelo Branco: 272 337 733.
