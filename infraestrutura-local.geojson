@@ -1,0 +1,51 @@
+{
+  "type": "FeatureCollection",
+  "name": "Infraestrutura ferroviaria local",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.3361,
+          40.33335
+        ]
+      },
+      "properties": {
+        "name": "Belmonte-Manteigas",
+        "kind": "station",
+        "description": "Estação ferroviária — Linha da Beira Baixa; coordenadas publicadas em fontes OSM/Wikimedia."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.28728,
+          40.38877
+        ]
+      },
+      "properties": {
+        "name": "Maçainhas",
+        "kind": "halt",
+        "description": "Apeadeiro ferroviário — Linha da Beira Baixa."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.26857,
+          40.43463
+        ]
+      },
+      "properties": {
+        "name": "Passagem de nível de Benespera",
+        "kind": "level_crossing",
+        "description": "Passagem de nível identificada em OpenStreetMap."
+      }
+    }
+  ]
+}

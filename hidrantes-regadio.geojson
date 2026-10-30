@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.332749,
+          40.369111
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "EM 571",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.323897,
+          40.34172
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Quinta da Ribeira",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.291794,
+          40.337889
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "EM 563",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.377719,
+          40.330615
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "EM 1051 — Quinta das Pereiras",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.362837,
+          40.313732
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "EM 1051 — Malpique",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.316784,
+          40.310179
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "EN 18-3",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.339817,
+          40.279867
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "EM 570",
+        "kind": "hydrant",
+        "source": "Código atual da aplicação CBV BELMONTE"
+      }
+    }
+  ]
+}

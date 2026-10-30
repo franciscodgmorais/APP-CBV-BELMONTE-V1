@@ -1,0 +1,41 @@
+{
+  "notice": "Referências de PK fornecidas no código da aplicação; coordenadas exatas dos nós não estão confirmadas e não foram inventadas.",
+  "nodes": [
+    {
+      "node": 34,
+      "name": "Benespera",
+      "pk": [
+        199.2,
+        199.7
+      ],
+      "coordinates": null
+    },
+    {
+      "node": 33,
+      "name": "Maçainhas",
+      "pk": [
+        190.1,
+        190.6
+      ],
+      "coordinates": null
+    },
+    {
+      "node": 32,
+      "name": "Caria",
+      "pk": [
+        181.7,
+        182.1
+      ],
+      "coordinates": null
+    },
+    {
+      "node": 31,
+      "name": "Covilhã Norte",
+      "pk": [
+        172.6,
+        172.9
+      ],
+      "coordinates": null
+    }
+  ]
+}
