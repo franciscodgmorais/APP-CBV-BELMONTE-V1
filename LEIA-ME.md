@@ -1,33 +1,39 @@
-# CBV BELMONTE — correção da Cartografia
+# CBV BELMONTE — pacote de preparação offline
 
-## O que foi corrigido
-- As camadas da Linha Ferroviária, A23, estações/passagens e nós de acesso consultam agora mais do que um servidor público OpenStreetMap/Overpass, caso a primeira fonte falhe.
-- As linhas e pontos recebidos são adicionados às respetivas camadas, com identificação e ligação para navegação no Google Maps.
-- A imagem enviada da rede de estradas já não é colocada por cima do mapa. O conteúdo foi traçado como linhas vetoriais coloridas e clicáveis, com os nomes visíveis ao tocar/selecionar.
+## Ficheiros a publicar
 
-## Importante
-- O traçado extraído da fotografia é aproximado, porque a imagem não contém georreferenciação/controlo cartográfico suficiente para garantir a posição exata de cada troço. Usar como referência visual e confirmar os alinhamentos no terreno.
-- A quilometragem oficial da A23 e dos nós não é inventada; só deve ser mostrada quando for confirmada por fonte rodoviária oficial.
-- A obtenção de dados ferroviários, nós de acesso e outros elementos externos depende de Internet e da disponibilidade dos servidores públicos. Se os servidores estiverem indisponíveis, voltar a abrir Cartografia mais tarde.
-- O conteúdo continua a não substituir cartografia operacional certificada.
+Carrega/substitui no repositório mantendo esta estrutura:
 
-## Atualizar GitHub Pages
-1. Extrair o ZIP.
-2. Substituir `index.html` no repositório `APP-CBV-BELMONTE-V1`.
-3. Manter os restantes ficheiros e imagens já existentes no repositório. O ficheiro `rede-estradas-belmonte.jpg` deixa de ser necessário para sobreposição, mas pode ser mantido como referência.
-4. Fazer Commit changes e atualizar a aplicação.
+- `index.html`
+- `sw.js`
+- `logo-cbv-belmonte.png`
+- `frota-cbv-belmonte.jpg`
+- `rede-estradas-belmonte.jpg`
+- `dados/hidrantes-regadio.geojson`
+- `dados/hidrantes-regadio.gpx`
 
+Não coloques os ficheiros da pasta `dados` na raiz: mantém a pasta `dados`.
 
-Atualização cartográfica: foram adicionados localmente os PK de referência da imagem fornecida para os nós (34) Benespera (199,2/199,7), (33) Maçainhas (190,1/190,6), (32) Caria (181,7/182,1) e (31) Covilhã Norte (172,6/172,9). Entrada/saída e sentido de circulação permanecem por confirmar documentalmente; não foram inferidos.
+## O que esta versão prepara
 
-## Correção de carregamento móvel (28-10-2026)
-O mapa base e os hidrantes são apresentados primeiro. As camadas externas deixam de fazer três tentativas de espera prolongada: a consulta Overpass tem limite de cerca de 9 segundos e os limites administrativos têm limite de 7 segundos. Se o serviço externo estiver lento, a aplicação mantém o mapa base e os recursos locais disponíveis, em vez de esperar dezenas de segundos. A disponibilidade das camadas externas depende da rede e dos serviços públicos.
+- A aplicação e os ficheiros locais ficam pré-guardados pelo Service Worker.
+- A biblioteca Leaflet (JavaScript/CSS) é guardada após a instalação/atualização do Service Worker.
+- Os mosaicos do OpenStreetMap e da imagem de satélite são guardados à medida que são efetivamente consultados, com limite de 800 mosaicos para controlar o espaço ocupado.
+- Os dados dos hidrantes já estão também disponíveis em GeoJSON e GPX na pasta `dados`.
+- Os dados A23/ferrovia e limites que a aplicação já consulta continuam a usar a cache local própria do código.
 
-CDOS Castelo Branco: 272 337 733.
+## Limitação importante — cobertura do mapa offline
 
+Este pacote **não contém uma cobertura completa de mosaicos cartográficos offline** para todo o concelho e A23. Não descarrega em massa mosaicos do OpenStreetMap. O mapa de fundo fica disponível offline apenas nas áreas/níveis de zoom que já tenham sido visualizados e guardados neste dispositivo. Para preparar uma área, abre a cartografia com Internet e percorre a zona e os níveis de zoom necessários.
 
-## Otimização de carregamento móvel (28-10-2026)
-- O mapa abre primeiro com a camada base, os 7 hidrantes e a posição GPS; o pedido de GPS usa primeiro uma localização recente/rápida.
-- A consulta pesada da A23/ferrovia deixou de iniciar automaticamente: ativa as respetivas camadas quando forem necessárias.
-- Os limites de freguesia ficam em cache local após a primeira obtenção, para acelerar aberturas seguintes no mesmo navegador/dispositivo.
-- Cada nó A23 tem um botão de direções Google Maps por pesquisa do nome; PK, entrada/saída e sentido continuam assinalados como por confirmar até existir fonte oficial.
+A primeira abertura após publicar/atualizar o Service Worker pode exigir ligação e uma segunda abertura para a nova versão ficar ativa. A navegação externa (Google Maps/Apple Maps) e o cálculo de rotas dependem de Internet e/ou dos mapas offline configurados no telemóvel.
+
+## Teste recomendado
+
+1. Publica todos os ficheiros e pastas.
+2. Abre a aplicação com Internet e aguarda que carregue.
+3. Abre a Cartografia e percorre o concelho de Belmonte e o troço da A23 Covilhã Norte–Benespera, incluindo os níveis de zoom que costumas usar.
+4. Fecha a aplicação, ativa modo de voo e volta a abrir a Cartografia.
+5. Confirma que o mapa aparece nas zonas já visitadas e que os hidrantes/dados locais continuam acessíveis.
+
+Esta versão é uma primeira camada de funcionamento offline. Não substitui a validação operacional da cartografia, dos acessos, dos PK e dos sentidos de circulação.
