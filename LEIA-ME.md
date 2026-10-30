@@ -1,39 +1,30 @@
-# CBV BELMONTE — pacote de preparação offline
+# CBV BELMONTE — pacote local-first V2
 
-## Ficheiros a publicar
+## Publicação
+Extrai o ZIP e carrega todos os ficheiros para a raiz do repositório GitHub Pages, mantendo a pasta `dados`.
 
-Carrega/substitui no repositório mantendo esta estrutura:
+## O que muda nesta versão
+- A abertura da cartografia deixa de consultar automaticamente Overpass e DGT.
+- Os dados Overpass já guardados no `localStorage` deste iPhone são desenhados imediatamente.
+- Se não houver cache, a aplicação informa e só descarrega dados quando carregares em **Atualizar dados cartográficos**.
+- Os limites DGT guardados no iPhone são reutilizados; uma atualização DGT só ocorre quando pedida manualmente.
+- Existem pontos ferroviários locais em GeoJSON: Belmonte-Manteigas, Maçainhas e uma passagem de nível de Benespera.
+- Os sete hidrantes estão incluídos em GeoJSON local.
+- O Service Worker guarda a aplicação, os dados locais, Leaflet e os mosaicos que forem efetivamente visualizados.
 
-- `index.html`
-- `sw.js`
-- `logo-cbv-belmonte.png`
-- `frota-cbv-belmonte.jpg`
-- `rede-estradas-belmonte.jpg`
-- `dados/hidrantes-regadio.geojson`
-- `dados/hidrantes-regadio.gpx`
+## Limitações conhecidas — importante para uso operacional
+- O pacote não inclui ainda o traçado completo e validado da A23 nem a geometria contínua da Linha da Beira Baixa. É necessário obter e validar um extrato geográfico completo.
+- As referências PK dos nós 31–34 permanecem sem coordenadas exatas confirmadas. Não usei o centro da povoação de Benespera como se fosse a saída da A23.
+- Os limites de freguesia só ficam disponíveis offline se já tiverem sido guardados neste iPhone ou após a atualização manual.
+- O fundo OSM/Esri é guardado apenas nos mosaicos efetivamente vistos; não existe cobertura de mosaicos pré-descarregada para toda a área.
+- Navegação e cálculo de rotas em Google/Apple Maps dependem da aplicação externa, da cobertura e dos mapas offline do telemóvel.
+- Não utilizar como cartografia operacional certificada sem validação por fonte oficial e teste no terreno.
 
-Não coloques os ficheiros da pasta `dados` na raiz: mantém a pasta `dados`.
+## Primeiro teste
+1. Publica todos os ficheiros, mantendo a pasta `dados`.
+2. Abre a app no iPhone com Internet e entra em Cartografia.
+3. Se a A23/ferrovia não aparecerem, toca uma vez em **Atualizar dados cartográficos** e aguarda a conclusão.
+4. Fecha completamente a app e volta a abrir. A próxima abertura usa a cache local sem consulta automática.
+5. Testa em modo de voo as zonas e níveis de zoom que já visualizaste.
 
-## O que esta versão prepara
-
-- A aplicação e os ficheiros locais ficam pré-guardados pelo Service Worker.
-- A biblioteca Leaflet (JavaScript/CSS) é guardada após a instalação/atualização do Service Worker.
-- Os mosaicos do OpenStreetMap e da imagem de satélite são guardados à medida que são efetivamente consultados, com limite de 800 mosaicos para controlar o espaço ocupado.
-- Os dados dos hidrantes já estão também disponíveis em GeoJSON e GPX na pasta `dados`.
-- Os dados A23/ferrovia e limites que a aplicação já consulta continuam a usar a cache local própria do código.
-
-## Limitação importante — cobertura do mapa offline
-
-Este pacote **não contém uma cobertura completa de mosaicos cartográficos offline** para todo o concelho e A23. Não descarrega em massa mosaicos do OpenStreetMap. O mapa de fundo fica disponível offline apenas nas áreas/níveis de zoom que já tenham sido visualizados e guardados neste dispositivo. Para preparar uma área, abre a cartografia com Internet e percorre a zona e os níveis de zoom necessários.
-
-A primeira abertura após publicar/atualizar o Service Worker pode exigir ligação e uma segunda abertura para a nova versão ficar ativa. A navegação externa (Google Maps/Apple Maps) e o cálculo de rotas dependem de Internet e/ou dos mapas offline configurados no telemóvel.
-
-## Teste recomendado
-
-1. Publica todos os ficheiros e pastas.
-2. Abre a aplicação com Internet e aguarda que carregue.
-3. Abre a Cartografia e percorre o concelho de Belmonte e o troço da A23 Covilhã Norte–Benespera, incluindo os níveis de zoom que costumas usar.
-4. Fecha a aplicação, ativa modo de voo e volta a abrir a Cartografia.
-5. Confirma que o mapa aparece nas zonas já visitadas e que os hidrantes/dados locais continuam acessíveis.
-
-Esta versão é uma primeira camada de funcionamento offline. Não substitui a validação operacional da cartografia, dos acessos, dos PK e dos sentidos de circulação.
+O Service Worker pode precisar de uma abertura adicional para assumir a nova versão no iOS.
