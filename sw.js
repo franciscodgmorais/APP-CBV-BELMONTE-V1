@@ -1,5 +1,5 @@
-const VERSION='cbv-belmonte-clean-cartography-v3';
-const SHELL=['./','./index.html','./sw.js','./manifest.webmanifest','./icon.svg','./a23-com-nos.geojson','./hidrantes-regadio.geojson','./referencias-a23.json','./logo-cbv-belmonte.png','./frota-cbv-belmonte.jpg','./rede-estradas-belmonte.jpg'];
+const VERSION='cbv-belmonte-roads-v4';
+const SHELL=['./','./index.html','./sw.js','./manifest.webmanifest','./icon.svg','./a23-com-nos.geojson','./rede-estradas-concelho-belmonte.geojson','./hidrantes-regadio.geojson','./referencias-a23.json','./logo-cbv-belmonte.png','./frota-cbv-belmonte.jpg','./rede-estradas-belmonte.jpg'];
 const TILE_CACHE='cbv-belmonte-tiles-v2';
 const ASSET_CACHE='cbv-belmonte-assets-v2';
 const TILE_HOSTS=['tile.openstreetmap.org','server.arcgisonline.com'];
