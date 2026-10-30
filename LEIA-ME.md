@@ -1,7 +1,7 @@
 # CBV BELMONTE — pacote local-first V2
 
 ## Publicação
-Extrai o ZIP e carrega todos os ficheiros para a raiz do repositório GitHub Pages, mantendo a pasta `dados`.
+Extrai o ZIP e carrega todos os ficheiros para a raiz do repositório GitHub Pages, colocando todos os ficheiros diretamente na raiz do repositório. Não é necessária a pasta raiz do repositório.
 
 ## O que muda nesta versão
 - A abertura da cartografia deixa de consultar automaticamente Overpass e DGT.
@@ -21,7 +21,7 @@ Extrai o ZIP e carrega todos os ficheiros para a raiz do repositório GitHub Pag
 - Não utilizar como cartografia operacional certificada sem validação por fonte oficial e teste no terreno.
 
 ## Primeiro teste
-1. Publica todos os ficheiros, mantendo a pasta `dados`.
+1. Publica todos os ficheiros, colocando todos os ficheiros diretamente na raiz do repositório. Não é necessária a pasta raiz do repositório.
 2. Abre a app no iPhone com Internet e entra em Cartografia.
 3. Se a A23/ferrovia não aparecerem, toca uma vez em **Atualizar dados cartográficos** e aguarda a conclusão.
 4. Fecha completamente a app e volta a abrir. A próxima abertura usa a cache local sem consulta automática.

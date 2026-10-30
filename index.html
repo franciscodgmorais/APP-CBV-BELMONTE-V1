@@ -76,7 +76,7 @@ function initCartography(){
 async function loadLocalInfrastructure(){
  if(cartoLayers.stations&&cartoLayers.stations.getLayers().length)return;
  const status=document.getElementById('cartostatus');
- try{const r=await fetch('./dados/infraestrutura-local.geojson',{cache:'no-store'});if(!r.ok)throw Error('GeoJSON local indisponível');const geo=await r.json();if(!geo.features)return;
+ try{const r=await fetch('./infraestrutura-local.geojson',{cache:'no-store'});if(!r.ok)throw Error('GeoJSON local indisponível');const geo=await r.json();if(!geo.features)return;
   for(const f of geo.features){if(f.geometry?.type!=='Point')continue;const [lon,lat]=f.geometry.coordinates;const p=f.properties||{};const nav=`https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
    const crossing=p.kind==='level_crossing';L.circleMarker([lat,lon],{radius:crossing?6:8,color:crossing?'#6d4c41':'#92400e',fillColor:crossing?'#fff':'#fbbf24',fillOpacity:1}).bindPopup(`<strong>${escapeHtml(p.name||'Ponto ferroviário')}</strong><br>${escapeHtml(p.description||'Infraestrutura ferroviária')}<br><small>Dados locais — OpenStreetMap</small><br><a target="_blank" rel="noopener" href="${nav}">Navegar até aqui</a>`).bindTooltip(escapeHtml(p.name||'Ponto ferroviário'),{sticky:true}).addTo(cartoLayers.stations);
   }
