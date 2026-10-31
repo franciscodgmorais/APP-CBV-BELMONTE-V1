@@ -103,11 +103,11 @@ async function loadLocalRoads(){
   // Cada estrada recebe uma cor própria e o nome fica visível diretamente no mapa.
   const roadColors=['#e11d48','#2563eb','#16a34a','#9333ea','#ea580c','#0891b2','#a16207','#db2777','#4f46e5','#65a30d'];
   const roadFeatures=(geo.features||[]).filter(f=>f.geometry&&f.geometry.type!=='Point');
-  const colorByName={};roadFeatures.forEach((f,i)=>{colorByName[f.properties?.name||String(i)]=roadColors[i%roadColors.length]});
+  const colorByName={};roadFeatures.forEach((f,i)=>{colorByName[f.properties?.display_name||f.properties?.name||String(i)]=roadColors[i%roadColors.length]});
   const labelLayer=L.layerGroup();
   const layer=L.geoJSON({...geo,features:roadFeatures},{
-   style:f=>({color:colorByName[f.properties?.name]||'#2563eb',weight:5,opacity:.95}),
-   onEachFeature:(f,lyr)=>{const p=f.properties||{};const name=p.name||'Rede de Estradas';let body=`<strong>${escapeHtml(name)}</strong>`;if(p.description)body+=`<br>${escapeHtml(p.description)}`;lyr.bindPopup(body).bindTooltip(escapeHtml(name),{permanent:true,direction:'center',className:'road-name-label',opacity:.95});}
+   style:f=>({color:colorByName[f.properties?.display_name||f.properties?.name]||'#2563eb',weight:5,opacity:.95}),
+   onEachFeature:(f,lyr)=>{const p=f.properties||{};const name=p.display_name||p.name||'Rede de Estradas';let body=`<strong>${escapeHtml(name)}</strong>`;if(p.source_name)body+=`<br><small>Código GPX: ${escapeHtml(p.source_name)}</small>`;if(p.description)body+=`<br>${escapeHtml(p.description)}`;lyr.bindPopup(body).bindTooltip(escapeHtml(name),{permanent:true,direction:'center',className:'road-name-label',opacity:.95});}
   });
   layer.addTo(cartoLayers.roads);cartoLayers.roads._loaded=true;
   const cb=document.querySelector('[data-layer="roads"]');if(cb?.checked)cartoLayers.roads.addTo(cartoMap);

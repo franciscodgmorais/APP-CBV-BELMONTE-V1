@@ -1,0 +1,7 @@
+ATUALIZAÇÃO — IDENTIFICAÇÃO DAS ESTRADAS
+
+Foram aplicados os nomes fornecidos pelo utilizador aos 10 traçados: N 18, N 345, M 571, M 1055, M 1050, M 563, N 18-3, M 1051, M 570 e N 345-1.
+
+No GitHub, substitui index.html e rede-estradas-concelho-belmonte.geojson pelos ficheiros desta pasta. Mantém os restantes ficheiros já existentes.
+
+Os códigos originais do GPX foram preservados em source_name e aparecem nos detalhes do traçado. A etiqueta permanente no mapa passa a mostrar a identificação da estrada.
