@@ -97,19 +97,33 @@ async function loadLocalRoads(){
  if(!cartoLayers.roads||cartoLayers.roads._loaded)return;
  const status=document.getElementById('cartostatus');
  try{
-  const r=await fetch('./rede-estradas-concelho-belmonte.geojson',{cache:'no-store'});
+  const r=await fetch('./rede-estradas-concelho-belmonte.geojson?v=20261031-estradas2',{cache:'reload'});
   if(!r.ok)throw Error('Ficheiro local da rede de estradas indisponível');
   const geo=await r.json();
   // Cada estrada recebe uma cor própria e o nome fica visível diretamente no mapa.
   const roadColors=['#e11d48','#2563eb','#16a34a','#9333ea','#ea580c','#0891b2','#a16207','#db2777','#4f46e5','#65a30d'];
   const roadFeatures=(geo.features||[]).filter(f=>f.geometry&&f.geometry.type!=='Point');
   const colorByName={};roadFeatures.forEach((f,i)=>{colorByName[f.properties?.display_name||f.properties?.name||String(i)]=roadColors[i%roadColors.length]});
-  const labelLayer=L.layerGroup();
   const layer=L.geoJSON({...geo,features:roadFeatures},{
    style:f=>({color:colorByName[f.properties?.display_name||f.properties?.name]||'#2563eb',weight:5,opacity:.95}),
-   onEachFeature:(f,lyr)=>{const p=f.properties||{};const name=p.display_name||p.name||'Rede de Estradas';let body=`<strong>${escapeHtml(name)}</strong>`;if(p.source_name)body+=`<br><small>Código GPX: ${escapeHtml(p.source_name)}</small>`;if(p.description)body+=`<br>${escapeHtml(p.description)}`;lyr.bindPopup(body).bindTooltip(escapeHtml(name),{permanent:true,direction:'center',className:'road-name-label',opacity:.95});}
+   onEachFeature:(f,lyr)=>{const p=f.properties||{};const name=p.display_name||p.name||'Rede de Estradas';let body=`<strong>${escapeHtml(name)}</strong>`;if(p.source_name)body+=`<br><small>Código GPX: ${escapeHtml(p.source_name)}</small>`;if(p.description)body+=`<br>${escapeHtml(p.description)}`;lyr.bindPopup(body);}
   });
-  layer.addTo(cartoLayers.roads);cartoLayers.roads._loaded=true;
+  // Etiquetas criadas como marcadores independentes no ponto médio de cada estrada.
+  // Assim ficam sempre visíveis e não dependem do posicionamento de tooltips em linhas longas.
+  const labelMarkers=L.layerGroup();
+  roadFeatures.forEach((f,i)=>{
+   const name=f.properties?.display_name||f.properties?.name||'Estrada';
+   const line=L.geoJSON(f).getLayers()[0];
+   if(!line||typeof line.getLatLngs!=='function')return;
+   let coords=line.getLatLngs();
+   while(Array.isArray(coords[0])&&coords[0].length&&Array.isArray(coords[0][0]))coords=coords[0];
+   if(!coords.length)return;
+   const mid=coords[Math.floor((coords.length-1)/2)];
+   const color=roadColors[i%roadColors.length];
+   const icon=L.divIcon({className:'',html:`<span class="road-name-label" style="border-left:5px solid ${color}">${escapeHtml(name)}</span>`,iconSize:null,iconAnchor:[24,10]});
+   L.marker(mid,{icon,interactive:false,keyboard:false,zIndexOffset:1000}).addTo(labelMarkers);
+  });
+  layer.addTo(cartoLayers.roads);labelMarkers.addTo(cartoLayers.roads);cartoLayers.roads._loaded=true;
   const cb=document.querySelector('[data-layer="roads"]');if(cb?.checked)cartoLayers.roads.addTo(cartoMap);
   if(status)status.textContent='A23 e Rede de Estradas do Concelho de Belmonte carregadas.';
  }catch(e){console.warn('Rede de Estradas:',e);if(status)status.textContent='Não foi possível carregar a Rede de Estradas. Confirma que rede-estradas-concelho-belmonte.geojson está na raiz da aplicação.';}
