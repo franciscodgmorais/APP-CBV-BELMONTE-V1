@@ -1,0 +1,9 @@
+CORREÇÃO DAS PLACAS DAS LOCALIDADES
+
+O texto das placas foi ajustado para permanecer numa única linha, sem partir palavras nem letras. A largura da placa adapta-se ao nome da localidade.
+
+No GitHub, substitui apenas:
+- index.html
+- sw.js
+
+Mantém todos os GeoJSON e restantes ficheiros que já tens no repositório. Depois do commit, aguarda a publicação e fecha completamente a aplicação no iPhone antes de a abrir novamente.
