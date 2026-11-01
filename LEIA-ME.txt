@@ -1,9 +1,7 @@
-ATUALIZAÇÃO — EXPANDIR MAPA
+ATUALIZAÇÃO CBV BELMONTE — NOVAS CAMADAS
 
-Esta atualização acrescenta um botão «Expandir mapa» na barra superior da cartografia operacional. O mapa ocupa quase todo o ecrã e o botão muda para «Reduzir mapa» para regressar à vista normal.
+Substituir no GitHub: index.html e sw.js.
+Adicionar/substituir na raiz: rede-estradas-concelho-belmonte.geojson, linha-ferroviaria.geojson, estacoes-passagens-nivel.geojson, localidades-belmonte.geojson.
+Manter a23-com-nos.geojson e os restantes ficheiros já existentes.
 
-No GitHub, substitui:
-- index.html
-- rede-estradas-concelho-belmonte.geojson (mantém a versão atual; incluída neste pacote para acompanhar o index)
-
-Não substituas os restantes ficheiros. Depois da publicação, fecha e volta a abrir a aplicação. Se não atualizar, fecha a PWA e abre novamente a partir do Safari.
+A rede de estradas foi substituída pelos 12 traçados do novo GPX. As camadas abrem todas desligadas. Linha ferroviária: linha roxa tracejada. Estações: marcador azul 🚉. Passagens de nível: marcador laranja ✕. Localidades: marcador verde. Os pontos de estações, passagens de nível e localidades incluem ligação a direções no Google Maps. Foram adicionados GNR Belmonte (275910020) e GNR Caria (275476141).
