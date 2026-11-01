@@ -1,18 +1,1 @@
-CBV BELMONTE — ATUALIZAÇÃO DOS ÍCONES DA CARTOGRAFIA
-
-Alterações:
-- Minha posição GPS passa a usar um alvo vermelho (opção D), claramente distinguível dos restantes pontos.
-- As localidades passam a aparecer em placas azuis com letras brancas e o nome sempre visível no mapa.
-- As placas não têm seta no final.
-- Ao tocar numa placa continua disponível a ligação para obter direções no Google Maps.
-- Estações ferroviárias e passagens de nível mantêm os respetivos símbolos.
-
-Instalação:
-1. Extrair este ZIP.
-2. Substituir index.html e sw.js na raiz do repositório GitHub.
-3. Manter os quatro ficheiros GeoJSON já existentes na raiz (incluindo a23-com-nos.geojson, que permanece no repositório).
-4. Fazer commit e aguardar a publicação do GitHub Pages.
-5. Fechar completamente a aplicação no iPhone e voltar a abrir.
-
-Validação realizada: sintaxe JavaScript de index.html e sw.js validada com Node.js.
-A apresentação visual ainda deve ser confirmada no iPhone após a publicação.
+Atualização de etiquetas das localidades e nós da A23. Substituir index.html, sw.js, localidades-belmonte.geojson e a23-com-nos.geojson na raiz do repositório. Manter os restantes ficheiros.

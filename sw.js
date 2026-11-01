@@ -1,4 +1,4 @@
-const VERSION='cbv-belmonte-local-v5-placas-texto-inteiro';
+const VERSION='cbv-belmonte-local-v6-nomes-localidades-nos-a23';
 const SHELL=['./','./index.html','./sw.js','./manifest.webmanifest','./icon.svg','./infraestrutura-local.geojson','./linha-ferroviaria.geojson','./estacoes-passagens-nivel.geojson','./localidades-belmonte.geojson','./a23-com-nos.geojson','./hidrantes-regadio.geojson','./referencias-a23.json','./logo-cbv-belmonte.png','./frota-cbv-belmonte.jpg','./rede-estradas-belmonte.jpg'];
 const TILE_CACHE='cbv-belmonte-tiles-v2';
 const ASSET_CACHE='cbv-belmonte-assets-v2';
