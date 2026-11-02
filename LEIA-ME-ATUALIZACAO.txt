@@ -1,0 +1,12 @@
+ATUALIZAÇÃO APP CBV BELMONTE — 02/11/2026
+
+1. Faça cópia de segurança do repositório atual.
+2. Extraia TODO o conteúdo deste ZIP.
+3. Carregue os ficheiros e pastas na raiz do repositório APP-CBV-BELMONTE-V1, substituindo index.html e sw.js e adicionando os restantes ficheiros.
+4. Aguarde a publicação do GitHub Pages. No iPhone, feche completamente a PWA e volte a abrir com Internet para atualizar a cache.
+
+INCLUÍDO: fichas fotográficas dos 7 hidrantes associadas pelo número; consulta ampliável; imagens Adulto e Pediátrico nos respetivos separadores; calculadora de autonomia de oxigénio; novo menu Matérias Perigosas com PDF integral do manual ANPC para consulta offline.
+
+IMPORTANTE — MATÉRIAS PERIGOSAS: nesta entrega está incluído o manual original em PDF e uma página de consulta/alertas. O índice ONU/Kemler pesquisável, os 62 guias estruturados e as duas tabelas verdes ainda NÃO estão convertidos em base de dados pesquisável. Para evitar informação operacional incompleta ou inventada, a consulta desses conteúdos deve ser feita no PDF.
+
+A calculadora de oxigénio fornece estimativas e não substitui a verificação do equipamento nem os procedimentos operacionais.
