@@ -1,0 +1,18 @@
+CBV BELMONTE — atualização visual dos ícones
+Data: 02-11-2026
+
+Ícones individualizados:
+- Matérias Perigosas: frasco químico + sinal de perigo.
+- Equipamentos: caixa de ferramentas.
+- Adulto: silhueta adulta.
+- Pediátrico: silhueta infantil.
+- Hospitais de Evacuação: edifício hospitalar.
+- Calculadora de Oxigénio: garrafa de oxigénio.
+- Hidrantes Urbanos: edifício/rede urbana, distinto do hidrante da rede de regadio.
+
+Mantido o estilo vermelho operacional nos ícones dos menus.
+Os símbolos cartográficos coloridos não foram alterados.
+O identificador de cache do service worker foi atualizado para v5-icons para forçar a atualização dos recursos da PWA.
+
+Validação realizada: sintaxe JavaScript do index.html e do service worker validada com Node.js.
+Não foi possível realizar um teste visual no iPhone nesta sessão; confirmar após publicação.

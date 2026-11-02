@@ -1,0 +1,11 @@
+CBV BELMONTE — atualização visual do ecrã inicial
+Data: 02-11-2026
+
+- Aplicado o conceito visual aprovado: cartões brancos, ícones brancos em quadrados vermelhos e títulos centrados.
+- Grelha responsiva: duas colunas em telemóvel, três em tablet/ecrãs médios e quatro em ecrãs largos.
+- Mantidos os oito módulos e respetivas ações: Minha Posição, Hidrantes, Viaturas, Cartografia, Equipamentos, Pré-Hospitalar, Contactos Úteis e Matérias Perigosas.
+- Pré-Hospitalar passa a usar um símbolo universal inspirado na Estrela da Vida, sem reproduzir o logótipo institucional completo do INEM.
+- Mantidos o cabeçalho da corporação, os dados, as funcionalidades, a navegação inferior e os símbolos cartográficos.
+- Atualizada a versão de cache do service worker para forçar a atualização da interface.
+
+Nota: pacote preparado a partir da versão de ícones de 02-11-2026. Deve ser testado em GitHub Pages e nos dispositivos antes de utilização operacional.
