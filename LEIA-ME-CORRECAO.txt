@@ -5,3 +5,7 @@ CORREÇÃO CBV BELMONTE — MATÉRIAS PERIGOSAS
 3. O número de perigo e o número ONU continuam a ser campos separados e editáveis.
 
 Instalação: substituir os ficheiros da pasta work_update na raiz do repositório GitHub. O service worker foi atualizado para renovar a cache.
+
+
+CORREÇÃO DE ÍNDICE ONU (02-11-2026)
+Foi acrescentada a entrada ONU 1866 — RESINA EM SOLUÇÃO, INFLAMÁVEL — Guia 127, confirmada no índice numérico e no índice alfabético do Manual ANPC 2011. Kemler 30: matéria líquida inflamável, conforme a tabela de identificação de perigo do mesmo manual.
