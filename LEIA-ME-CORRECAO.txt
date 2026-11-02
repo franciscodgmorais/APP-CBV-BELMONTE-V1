@@ -1,9 +1,7 @@
-CORREÇÃO DAS PLACAS DAS LOCALIDADES
+CORREÇÃO CBV BELMONTE — MATÉRIAS PERIGOSAS
 
-O texto das placas foi ajustado para permanecer numa única linha, sem partir palavras nem letras. A largura da placa adapta-se ao nome da localidade.
+1. A consulta do manual passou a abrir dentro da própria aplicação, com botão "Voltar à pesquisa". Assim, não é necessário sair do visualizador e reabrir a aplicação.
+2. O formulário de pesquisa apresenta uma placa laranja visual semelhante ao painel ADR: número de perigo/Kemler no compartimento superior e número ONU no compartimento inferior.
+3. O número de perigo e o número ONU continuam a ser campos separados e editáveis.
 
-No GitHub, substitui apenas:
-- index.html
-- sw.js
-
-Mantém todos os GeoJSON e restantes ficheiros que já tens no repositório. Depois do commit, aguarda a publicação e fecha completamente a aplicação no iPhone antes de a abrir novamente.
+Instalação: substituir os ficheiros da pasta work_update na raiz do repositório GitHub. O service worker foi atualizado para renovar a cache.
