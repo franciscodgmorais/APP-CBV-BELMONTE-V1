@@ -1,0 +1,10 @@
+CBV BELMONTE — VALIDAÇÃO DA BASE DE MATÉRIAS PERIGOSAS
+
+Fonte: Manual ANPC, junho de 2011 (adaptado do ERG 2008).
+Registos: 2.489 designações; 1.917 números ONU distintos.
+Referências de guia distintas (incluindo P): 66. Guias disponíveis: 62 (111–172).
+Todas as referências base usadas pelo índice encontram um guia.
+Foram corrigidas duas designações concatenadas com a linha seguinte: ONU 3390 e ONU 3493.
+Os guias foram novamente extraídos das páginas do PDF e reorganizados por colunas.
+
+LIMITAÇÃO: a base não codifica a marcação verde/PTI nem as distâncias da Tabela 1. A aplicação avisa para consultar o PDF original quando aplicável. Esta validação não é certificação nem aprovação operacional. Ver AUDITORIA_MATERIAS_PERIGOSAS_2026-11-02.txt.

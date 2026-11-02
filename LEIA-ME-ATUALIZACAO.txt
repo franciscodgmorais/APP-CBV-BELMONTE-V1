@@ -1,12 +1,28 @@
-ATUALIZAÇÃO APP CBV BELMONTE — 02/11/2026
+CBV BELMONTE — VERSÃO FINAL DE REVISÃO 02/11/2026
 
-1. Faça cópia de segurança do repositório atual.
-2. Extraia TODO o conteúdo deste ZIP.
-3. Carregue os ficheiros e pastas na raiz do repositório APP-CBV-BELMONTE-V1, substituindo index.html e sw.js e adicionando os restantes ficheiros.
-4. Aguarde a publicação do GitHub Pages. No iPhone, feche completamente a PWA e volte a abrir com Internet para atualizar a cache.
+INSTALAÇÃO
+1. Faz uma cópia de segurança do repositório atual.
+2. Extrai TODO o conteúdo deste ZIP para a raiz do repositório APP-CBV-BELMONTE-V1, mantendo a pasta de ficheiros e os nomes exatamente como estão.
+3. Substitui index.html e sw.js e adiciona os restantes ficheiros.
+4. Aguarda a publicação do GitHub Pages. No iPhone, fecha a PWA completamente e volta a abri-la com Internet para a nova cache ser instalada.
 
-INCLUÍDO: fichas fotográficas dos 7 hidrantes associadas pelo número; consulta ampliável; imagens Adulto e Pediátrico nos respetivos separadores; calculadora de autonomia de oxigénio; novo menu Matérias Perigosas com PDF integral do manual ANPC para consulta offline.
+INCLUÍDO
+- 7 hidrantes com fichas fotográficas;
+- Cartografia vetorial local: A23 e nós 31–34, rede de estradas, ferrovia, estações/passagens de nível e localidades;
+- nomes dos nós A23 alinhados com as referências do ficheiro local: 31 Covilhã Norte, 32 Caria, 33 Maçainhas, 34 Benespera;
+- camadas locais selecionadas e carregadas automaticamente ao abrir a cartografia;
+- limites de freguesia obtidos da DGT e guardados localmente após primeira atualização (requer Internet na primeira obtenção);
+- Minha Posição, coordenadas DMS/UTM, bússola e partilha;
+- EPH, imagens de apoio, hospitais, contactos e estimador de autonomia de oxigénio;
+- Matérias Perigosas com pesquisa ONU/Kemler, índice confrontado com o PDF, 62 guias extraídos novamente por colunas, manual PDF e relatório de auditoria incluído.
 
-IMPORTANTE — MATÉRIAS PERIGOSAS: nesta entrega está incluído o manual original em PDF e uma página de consulta/alertas. O índice ONU/Kemler pesquisável, os 62 guias estruturados e as duas tabelas verdes ainda NÃO estão convertidos em base de dados pesquisável. Para evitar informação operacional incompleta ou inventada, a consulta desses conteúdos deve ser feita no PDF.
+LIMITAÇÕES IMPORTANTES
+- Os dados vetoriais incluídos ficam disponíveis offline depois de instalados. O motor Leaflet é pré-carregado para cache pelo service worker quando há Internet.
+- O fundo cartográfico OpenStreetMap e a imagem de satélite dependem de Internet ou de mosaicos que o dispositivo já tenha em cache; os mosaicos não são incluídos neste ZIP.
+- Os limites oficiais de freguesia são descarregados da DGT na primeira utilização/atualização e ficam guardados no dispositivo.
+- Distâncias rodoviárias aos hospitais, identificação de via/localidade e navegação dependem de serviços externos/GPS.
+- A rede de estradas é derivada dos GPX fornecidos; confirmar alinhamentos no terreno. Coordenadas dos nós A23 e PK são referências fornecidas e não certificam acessos, sentidos ou posição exata.
+- A base de matérias perigosas é uma transcrição do manual ANPC 2011 (ERG 2008). Foram corrigidas duas designações concatenadas (ONU 3390 e 3493) e reorganizados os 62 guias. A base não incorpora a marcação verde/PTI nem as distâncias da Tabela 1: consultar o PDF original sempre que aplicável. Ver AUDITORIA_MATERIAS_PERIGOSAS_2026-11-02.txt. Confirmar sempre painel físico e documentação de transporte.
+- A calculadora de oxigénio fornece estimativa teórica; não substitui a verificação da garrafa/equipamento nem procedimentos operacionais.
 
-A calculadora de oxigénio fornece estimativas e não substitui a verificação do equipamento nem os procedimentos operacionais.
+A aplicação é uma ferramenta de apoio à decisão, não substitui cartografia certificada, formação, comando ou procedimentos operacionais.

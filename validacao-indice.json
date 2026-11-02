@@ -1,0 +1,23 @@
+{
+  "unique_designations": 2489,
+  "unique_onu": 1917,
+  "unique_guide_references_including_P": 66,
+  "normalized_guide_numbers": 56,
+  "guide_text_records": 62,
+  "missing_guide_text": [],
+  "unused_guide_text_records": [
+    "111",
+    "112",
+    "114",
+    "167",
+    "168",
+    "169"
+  ],
+  "test_reference": {
+    "onu": "1866",
+    "name": "RESINA EM SOLUÇÃO, INFLAMÁVEL",
+    "guide": "127",
+    "kemler": "30"
+  },
+  "note": "Consistency check only. Data transcribed from the supplied ANPC 2011 manual; not independently certified page-by-page. Guide references with suffix P map to the base guide text and are separately flagged in the UI."
+}

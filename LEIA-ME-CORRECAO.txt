@@ -1,11 +1,10 @@
-CORREÇÃO CBV BELMONTE — MATÉRIAS PERIGOSAS
+CORREÇÕES INCLUÍDAS NA VERSÃO FINAL DE REVISÃO — 02/11/2026
 
-1. A consulta do manual passou a abrir dentro da própria aplicação, com botão "Voltar à pesquisa". Assim, não é necessário sair do visualizador e reabrir a aplicação.
-2. O formulário de pesquisa apresenta uma placa laranja visual semelhante ao painel ADR: número de perigo/Kemler no compartimento superior e número ONU no compartimento inferior.
-3. O número de perigo e o número ONU continuam a ser campos separados e editáveis.
+- Corrigidos os nomes apresentados nos nós A23: 31 Covilhã Norte, 32 Caria, 33 Maçainhas e 34 Benespera, alinhados com as descrições do ficheiro GeoJSON e com as referências de PK.
+- Incluídos os ficheiros GeoJSON que faltavam para A23, rede de estradas, ferrovia, estações/passagens de nível e localidades.
+- As camadas vetoriais locais selecionadas são carregadas automaticamente ao abrir a cartografia.
+- A navegação inferior “Mapa” abre agora a cartografia operacional completa.
+- O service worker inclui os ficheiros locais necessários e tenta guardar em cache a biblioteca Leaflet para utilização offline após uma abertura com Internet.
+- Atualizado o relatório da base ONU/Kemler: 2.489 registos, 1.917 ONU distintos, 66 referências de guia (incluindo sufixo P), 62 textos de guia e zero referências sem texto base.
 
-Instalação: substituir os ficheiros da pasta work_update na raiz do repositório GitHub. O service worker foi atualizado para renovar a cache.
-
-
-CORREÇÃO DE ÍNDICE ONU (02-11-2026)
-Foi acrescentada a entrada ONU 1866 — RESINA EM SOLUÇÃO, INFLAMÁVEL — Guia 127, confirmada no índice numérico e no índice alfabético do Manual ANPC 2011. Kemler 30: matéria líquida inflamável, conforme a tabela de identificação de perigo do mesmo manual.
+Limitações e validações operacionais constam do ficheiro LEIA-ME-ATUALIZACAO.txt.

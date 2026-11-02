@@ -1,0 +1,41 @@
+CBV BELMONTE — AUDITORIA DA BASE DE MATÉRIAS PERIGOSAS
+Data: 02-11-2026
+
+1. FONTE E ÂMBITO
+Fonte primária confrontada: Manual de Intervenção em Emergências com Matérias Perigosas — Químicas, Biológicas e Radiológicas, ANPC, junho de 2011, ISBN 978-989-8343-08-6. O próprio manual indica adaptação do Emergency Response Guidebook 2008 (ERG2008).
+PDF original incluído na aplicação: manual-materias-perigosas-anpc.pdf (159 páginas).
+
+2. ÍNDICE ONU E GUIAS
+- Registos de designações na base: 2.489.
+- Números ONU distintos: 1.917.
+- Referências de guia distintas no índice, incluindo sufixo P: 66.
+- Guias base distintos referenciados: 56.
+- Guias completos incluídos no ficheiro de guias: 62 (111 a 172).
+- Todas as referências base usadas pelo índice encontram uma chave de guia correspondente.
+- Corrigidos dois registos em que o texto da designação tinha absorvido o início da linha seguinte: ONU 3390 e ONU 3493. As designações foram repostas conforme a leitura do PDF.
+- Teste de referência: ONU 1866 → Guia 127 → RESINA EM SOLUÇÃO, INFLAMÁVEL.
+
+3. TEXTO DOS 62 GUIAS
+Os 62 guias foram novamente extraídos diretamente das páginas correspondentes do PDF, separando as colunas de perigos/proteção da população e resposta à emergência. A comparação automatizada de vocabulário entre cada página do PDF e a transcrição apresentou cobertura de termos distintos entre 98,5% e 100% (média aproximada 99,2%). Esta métrica confirma forte correspondência textual, mas não equivale a revisão humana de cada frase nem valida a adequação clínica/tática de cada recomendação.
+
+4. LIMITAÇÃO CRÍTICA — MARCAÇÃO VERDE / PTI / TABELA 1
+A base JSON do índice não preserva a marcação visual verde do manual e não contém as distâncias da Tabela 1 (distâncias de isolamento inicial e ação de proteção para PTI e outras matérias listadas). A aplicação foi alterada para avisar expressamente o utilizador desta limitação e remeter para as páginas verdes do PDF. Não se deve calcular isolamento ou evacuação apenas a partir do nome/guia apresentado pela aplicação.
+
+5. ATUALIDADE
+A edição portuguesa incluída é de 2011 e adapta o ERG2008. A página oficial da ANEPC continua a listar o manual, e o Relatório de Atividades ANEPC 2023 mencionou a intenção de o atualizar; nesta auditoria não foi encontrada confirmação oficial de que uma nova edição portuguesa tenha sido publicada.
+O ERG2024 existe e é disponibilizado pela PHMSA/Transport Canada/SICT, mas é uma publicação internacional (inglês/francês/espanhol) e não deve ser transplantada automaticamente para a aplicação portuguesa sem validação e adaptação oficial pela entidade competente.
+
+6. REGRAS DE UTILIZAÇÃO A MANTER
+- Confirmar fisicamente o número ONU e a designação no painel/documento de transporte; o Kemler não identifica sozinho a substância.
+- Confirmar se há sufixo P (risco de polimerização sob determinadas condições).
+- Verificar marcação verde e consultar a Tabela 1 quando aplicável; em incêndio, consultar também o guia.
+- Solicitar informação específica ao expedidor/telefone de emergência e apoio especializado; seguir comando, formação e procedimentos em vigor.
+- O manual é destinado à fase inicial de resposta e não substitui formação nem cobre todas as circunstâncias. A sua utilidade pode ser limitada em instalações fixas.
+
+7. CONCLUSÃO / ESTADO
+A transcrição foi corrigida e substancialmente confrontada com o PDF original; os 62 guias estão presentes e foram reorganizados para melhor leitura na aplicação. A base não deve ser descrita como certificada, infalível ou plenamente atualizada. A falta de codificação das marcações verdes e das distâncias PTI/Tabela 1 permanece uma limitação operacional deliberadamente assinalada na interface. A aprovação para uso operacional cabe à entidade responsável e aos seus responsáveis técnicos.
+
+Fontes externas de atualidade consultadas:
+- ANEPC — área oficial de documentação, onde o manual continua listado.
+- Relatório de Atividades ANEPC 2023, p. 71 — referência à intenção de atualizar o manual.
+- PHMSA — ERG2024 oficial, edição internacional de 2024.
