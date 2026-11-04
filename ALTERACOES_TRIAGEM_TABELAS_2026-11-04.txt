@@ -1,0 +1,12 @@
+CBV BELMONTE — Atualização da área Triagem Multivítimas
+Data: 04-11-2026
+
+- Substituídos os quatro fluxogramas apresentados no ecrã por tabelas de consulta rápida.
+- Tabelas separadas para adulto e três grupos pediátricos, mantendo os limiares e critérios do Manual de Operações das Equipas de Emergência Pré-Hospitalar do INEM (março 2024, pp. 30–33).
+- Adicionada tabela de categorias P1 vermelho, P2 amarelo, P3 verde e P0 preto.
+- Desenvolvida a área de triagem secundária com tabela de parâmetros FR, PAS e ECG, e tabela de interpretação do resultado total TRTS conforme pp. 33–34.
+- Não foi criada calculadora TRTS, porque esta versão do manual consultada não apresenta no texto os critérios de conversão de cada variável em pontos.
+- Mantida a distinção explícita: método de triagem INEM, não START.
+- Atualizada a versão da cache do service worker para forçar a atualização dos ficheiros após publicação.
+
+Nota: auxiliar de consulta; confirmar sempre os procedimentos e orientações em vigor do INEM/CODU e da estrutura de comando.
