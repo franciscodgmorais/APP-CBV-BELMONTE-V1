@@ -1,0 +1,13 @@
+CBV BELMONTE — Atualização Pré-Hospitalar: SBV/DAE
+
+Nesta atualização:
+- Mantidas as tabelas de parâmetros vitais adulto e pediátrico da versão anterior.
+- Adulto: acrescentados pontos-chave de SBV e sequência essencial DAE, além dos esquemas já existentes.
+- Pediátrico: acrescentados pontos-chave de SBV, orientações de utilização do DAE em crianças e referências às fontes.
+- Atualizada a versão da cache do service worker para forçar a instalação da nova shell quando publicada.
+
+Fontes consultadas:
+- INEM, Manual de Suporte Básico de Vida e Desfibrilhação Automática Externa, versão 2, especialmente pp. 10–22.
+- INEM, Manual de Suporte Básico de Vida Pediátrico, versão 4.0 (2022), especialmente pp. 8–17.
+
+Nota: conteúdo de apoio à consulta, não substitui formação, protocolos atuais, orientações do CODU, regras do Programa DAE nem algoritmos oficiais. Confirmar sempre a versão institucional em vigor antes de utilização operacional.

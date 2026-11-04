@@ -1,0 +1,24 @@
+CBV BELMONTE — Módulo Pré-Hospitalar (consolidação de 04-11-2026)
+
+Conteúdo integrado nesta versão:
+- Mantidas tabelas de parâmetros vitais Adulto e Pediátrico.
+- Mantidos os resumos SBV e SBV-DAE Adulto e SBV Pediátrico.
+- Adulto: incluída sequência de atuação na OVA consciente, ligeira/grave, e atuação perante inconsciência, com distinção para grávidas/obesidade.
+- Pediátrico: incluída sequência OVA para lactente e criança, distinguindo pancadas interescapulares + compressões torácicas no lactente e pancadas + compressões abdominais na criança; incluídas páginas ilustradas do manual.
+- Criada área Triagem Multivítimas com os quatro fluxogramas de triagem primária do Manual de Operações das Equipas de Emergência Pré-Hospitalar: adulto e três grupos pediátricos.
+- Incluídas categorias P1 vermelho, P2 amarelo, P3 verde e P0 preto, e nota sobre triagem secundária/TRTS.
+- Incluídas as imagens de fluxogramas diretamente das páginas do manual INEM, com indicação de página.
+- Atualizada versão/cache do service worker e respetiva lista de ficheiros para incluir os novos recursos.
+
+Fontes principais:
+- INEM, Manual TAS — Abordagem da Vítima, março 2024.
+- INEM, Manual TAS — Emergências Pediátricas, março 2024.
+- INEM, Manual Suporte Básico de Vida e Desfibrilhação Automática Externa, versão 2.
+- INEM, Manual Suporte Básico de Vida Pediátrico, versão 4.0 (2022).
+- INEM, Manual de Operações das Equipas de Emergência Pré-Hospitalar, março 2024, pp. 29–34.
+
+Limites e segurança:
+- O algoritmo multivítimas reproduzido é o fluxograma de triagem primária do manual de Operações INEM, não o START.
+- Conteúdo para consulta e estudo; não substitui formação, protocolos institucionais atualizados, orientação CODU, comando da operação ou decisão clínica.
+- Os fluxogramas são imagens de referência; em ocorrência real, utilizar os materiais oficiais e instruções em vigor.
+- Esta atualização não constitui validação clínica institucional.
